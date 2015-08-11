@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'little/children/version'
+require 'little_children/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "little-children"
-  spec.version       = Little::Children::VERSION
+  spec.version       = LittleChildren::VERSION
   spec.authors       = ["Hirofumi Wakasugi"]
   spec.email         = ["baenej@gmail.com"]
 
