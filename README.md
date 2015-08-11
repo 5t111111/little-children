@@ -28,6 +28,12 @@ osc_server.add_method("/greeting")
 osc_server.start
 ```
 
+Little Children also provides CLI
+
+```text
+$ /little-children-run-server 12345 /greeting /hello /hey
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/5t111111/little-children.
