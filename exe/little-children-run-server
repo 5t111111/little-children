@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require "little-children"
+
+def usage
+  $stderr.puts <<TXT
+little-children-run-server [port] [address1] [address2]
+TXT
+  exit 1
+end
+
+port = ARGV.shift
+addresses = ARGV
+
+addresses = addresses.map do |i|
+  i[0] != "/" ? "/" + i : i
+end
+
+osc_server = LittleChildren::OSCServer.new(port.to_i)
+
+addresses.each do |address|
+  osc_server.add_method(address.dup)
+end
+
+osc_server.start
